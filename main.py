@@ -1,9 +1,7 @@
-import brax
-import jax
-import mediapy as media
 import mujoco
 from dm_control import mjcf
 from mujoco import viewer
+
 
 model = mjcf.RootElement()
 assert model.worldbody is not None
