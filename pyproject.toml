@@ -15,7 +15,8 @@ dependencies = [
   "mujoco-mjx",
   "matplotlib",
   "mediapy",
-  "dm_control"
+  "dm_control",
+  "pre-commit" 
 ]
 
 [tool.ruff]
