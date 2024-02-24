@@ -1,0 +1,43 @@
+[project]
+name = "lancelot"
+version = "0.1.0"
+description = ""
+authors = [
+  {name = "Artur A. Galstyan", email = "mail@arturgalstyan.dev"},
+]
+readme = "README.md"
+dependencies = [
+  "jax",
+  "jaxlib", 
+  "brax",
+  "equinox",
+  "mujoco",
+  "mujoco-mjx",
+  "matplotlib",
+  "mediapy",
+  "dm_control"
+]
+
+[tool.ruff]
+extend-include = ["*.ipynb"]
+fixable = ["I001", "F401"]
+ignore = ["E402", "E721", "E731", "E741", "F722"]
+ignore-init-module-imports = true
+select = ["E", "F", "I001"]
+src = []
+
+[tool.ruff.isort]
+combine-as-imports = true
+extra-standard-library = ["typing_extensions"]
+lines-after-imports = 2
+order-by-type = false
+
+[tool.pyright]
+reportIncompatibleMethodOverride = true
+reportMissingImports = false
+include = ["jaxonloader", "tests"]
+
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
